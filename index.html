@@ -9,47 +9,48 @@
 </head>
 
 <body>
+    <div class="page">
+        <div class="container">
+            <h1>CRUD SYSTEM</h1>
 
-    <div class="container">
-        <h1>CRUD SYSTEM</h1>
+            <label for="name">Product Name</label>
+            <input id="name" type="text" placeholder="Enter product name">
 
-        <label for="name">Product Name</label>
-        <input id="name" type="text" placeholder="Enter product name">
+            <label for="category">Product Category</label>
+            <input id="category" type="text" placeholder="Enter category">
 
-        <label for="category">Product Category</label>
-        <input id="category" type="text" placeholder="Enter category">
+            <label for="price">Product Price</label>
+            <input id="price" type="number" placeholder="Enter price">
 
-        <label for="price">Product Price</label>
-        <input id="price" type="number" placeholder="Enter price">
+            <label for="desc">Product Description</label>
+            <textarea id="desc" placeholder="Enter product description"></textarea>
 
-        <label for="desc">Product Description</label>
-        <textarea id="desc" placeholder="Enter product description"></textarea>
-
-        <div class="btns">
-            <button id="mainBtn" onclick="addProduct()">Add Product</button>
-            <button class="secondary" onclick="clearInputs()">Clear</button>
+            <div class="btns">
+                <button id="mainBtn" onclick="addProduct()">Add Product</button>
+                <button class="secondary" onclick="clearInputs()">Clear</button>
+            </div>
         </div>
-    </div>
 
-    <div class="search">
-        <input id="search" onkeyup="searchProduct()" placeholder="Search products...">
-    </div>
+        <div class="search">
+            <input id="search" onkeyup="searchProduct()" placeholder="Search products...">
+        </div>
 
-    <div class="table-wrapper">
-        <table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                    <th>Description</th>
-                    <th>Update</th>
-                    <th>Delete</th>
-                </tr>
-            </thead>
-            <tbody id="tableBody"></tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
     </div>
 
     <script src="script.js"></script>

@@ -9,16 +9,19 @@ body {
     background: #eef2f6;
     color: #1f2937;
     line-height: 1.5;
+    padding: 22px 0 24px;
 }
 
 .page {
-    padding: 20px 16px 40px;
+    width: min(100%, 900px);
+    margin: 0 auto;
+    padding: 0 16px 40px;
     min-height: 100vh;
 }
 
 .container {
-    width: min(100%, 820px);
-    margin: 0 auto 22px;
+    width: 100%;
+    margin: 18px auto 22px;
     background: #ffffff;
     padding: 32px;
     border-radius: 18px;
@@ -172,21 +175,17 @@ tr:hover {
     .container {
         padding: 24px 18px;
     }
-
     .btns {
         flex-direction: column;
     }
-
     .search {
         width: 100%;
     }
-
     th,
     td {
         padding: 12px 10px;
         font-size: 13px;
     }
-
     table {
         min-width: 100%;
     }
@@ -197,19 +196,15 @@ tr:hover {
         margin-top: 16px;
         border-radius: 16px;
     }
-
     .page {
         padding: 16px 12px 28px;
     }
-
     .container h1 {
         font-size: 24px;
     }
-
     label {
         font-size: 13px;
     }
-
     button {
         min-width: auto;
     }
