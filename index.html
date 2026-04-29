@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD SYSTEM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>CRUD SYSTEM</h1>
+
+        <label>ProductName</label>
+        <input id="name">
+
+        <label>ProductCategory</label>
+        <input id="category">
+
+        <label>ProductPrice</label>
+        <input id="price">
+
+        <label>ProductDescription</label>
+        <textarea id="desc"></textarea>
+
+        <div class="btns">
+            <button id="mainBtn" onclick="addProduct()">AddProduct</button>
+            <button onclick="clearInputs()">Clear</button>
+        </div>
+    </div>
+
+    <div class="search">
+        <input id="search" onkeyup="searchProduct()" placeholder="search...">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>index</th>
+                <th>name</th>
+                <th>category</th>
+                <th>price</th>
+                <th>desc</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

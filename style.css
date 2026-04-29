@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: #f3f3f3;
+}
+
+.container {
+    width: 55%;
+    margin: 70px auto 25px;
+    background: white;
+    padding: 35px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.container h1 {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #444;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+.btns {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+button {
+    padding: 7px 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    color: white;
+}
+
+#mainBtn {
+    background: #0d6efd;
+}
+
+button:last-child {
+    background: #17a2b8;
+}
+
+.search {
+    width: 40%;
+    margin: 10px auto 20px;
+}
+
+.search input {
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+table {
+    width: 85%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+thead {
+    font-size: 13px;
+}
+
+th {
+    text-align: left;
+    padding: 10px 5px;
+}
+
+td {
+    padding: 10px 5px;
+    font-size: 13px;
+    border-top: 1px solid #eee;
+}
+
+td button:first-child {
+    background: #28a745;
+}
+
+td button:last-child {
+    background: #dc3545;
+}
+
+tr:hover {
+    background: #fafafa;
+}
