@@ -1,4 +1,4 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,109 +6,206 @@
 }
 
 body {
-    background: #f3f3f3;
+    background: #eef2f6;
+    color: #1f2937;
+    line-height: 1.5;
+    padding: 22px 0 24px;
+}
+
+.page {
+    width: min(100%, 900px);
+    margin: 0 auto;
+    padding: 0 16px 40px;
+    min-height: 100vh;
 }
 
 .container {
-    width: 55%;
-    margin: 70px auto 25px;
-    background: white;
-    padding: 35px 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    margin: 18px auto 22px;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
 }
 
 .container h1 {
-    font-size: 26px;
-    font-weight: 500;
-    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 22px;
+    letter-spacing: 0.02em;
 }
 
 label {
     display: block;
-    margin-top: 12px;
+    margin-top: 18px;
     font-size: 14px;
-    color: #444;
+    color: #334155;
 }
 
 input,
 textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    font-size: 14px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    font-size: 15px;
+    background: #f8fafc;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #ffffff;
 }
 
 textarea {
-    height: 80px;
-    resize: none;
+    min-height: 96px;
+    resize: vertical;
 }
 
 .btns {
     display: flex;
-    gap: 10px;
-    margin-top: 12px;
+    gap: 12px;
+    margin-top: 22px;
+    flex-wrap: wrap;
 }
 
 button {
-    padding: 7px 14px;
+    flex: 1;
+    min-width: 140px;
+    padding: 12px 16px;
     border: none;
-    border-radius: 5px;
-    font-size: 13px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
     color: white;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
 }
 
 #mainBtn {
-    background: #0d6efd;
+    background: #2563eb;
 }
 
-button:last-child {
-    background: #17a2b8;
+button.secondary {
+    background: #0ea5e9;
 }
 
 .search {
-    width: 40%;
-    margin: 10px auto 20px;
+    width: min(100%, 820px);
+    margin: 0 auto 20px;
 }
 
 .search input {
-    padding: 8px;
-    font-size: 13px;
-    border-radius: 6px;
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+}
+
+.table-wrapper {
+    width: min(100%, 820px);
+    margin: 0 auto;
+    overflow-x: auto;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
 }
 
 table {
-    width: 85%;
-    margin: auto;
+    width: 100%;
+    min-width: 640px;
     border-collapse: collapse;
 }
 
 thead {
-    font-size: 13px;
+    background: #f8fafc;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 14px;
 }
 
 th {
-    text-align: left;
-    padding: 10px 5px;
+    font-weight: 600;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
 }
 
 td {
-    padding: 10px 5px;
+    border-top: 1px solid #e2e8f0;
+    color: #334155;
+}
+
+td button {
+    padding: 8px 12px;
+    width: 100%;
+    border-radius: 10px;
     font-size: 13px;
-    border-top: 1px solid #eee;
+    white-space: nowrap;
 }
 
 td button:first-child {
-    background: #28a745;
+    background: #16a34a;
 }
 
 td button:last-child {
-    background: #dc3545;
+    background: #dc2626;
 }
 
 tr:hover {
-    background: #fafafa;
+    background: #f8fafc;
+}
+
+@media (max-width: 720px) {
+    .container {
+        padding: 24px 18px;
+    }
+    .btns {
+        flex-direction: column;
+    }
+    .search {
+        width: 100%;
+    }
+    th,
+    td {
+        padding: 12px 10px;
+        font-size: 13px;
+    }
+    table {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    .container {
+        margin-top: 16px;
+        border-radius: 16px;
+    }
+    .page {
+        padding: 16px 12px 28px;
+    }
+    .container h1 {
+        font-size: 24px;
+    }
+    label {
+        font-size: 13px;
+    }
+    button {
+        min-width: auto;
+    }
 }

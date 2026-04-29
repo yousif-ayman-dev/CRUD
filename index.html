@@ -3,51 +3,55 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD SYSTEM</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="page">
+        <div class="container">
+            <h1>CRUD SYSTEM</h1>
 
-    <div class="container">
-        <h1>CRUD SYSTEM</h1>
+            <label for="name">Product Name</label>
+            <input id="name" type="text" placeholder="Enter product name">
 
-        <label>ProductName</label>
-        <input id="name">
+            <label for="category">Product Category</label>
+            <input id="category" type="text" placeholder="Enter category">
 
-        <label>ProductCategory</label>
-        <input id="category">
+            <label for="price">Product Price</label>
+            <input id="price" type="number" placeholder="Enter price">
 
-        <label>ProductPrice</label>
-        <input id="price">
+            <label for="desc">Product Description</label>
+            <textarea id="desc" placeholder="Enter product description"></textarea>
 
-        <label>ProductDescription</label>
-        <textarea id="desc"></textarea>
+            <div class="btns">
+                <button id="mainBtn" onclick="addProduct()">Add Product</button>
+                <button class="secondary" onclick="clearInputs()">Clear</button>
+            </div>
+        </div>
 
-        <div class="btns">
-            <button id="mainBtn" onclick="addProduct()">AddProduct</button>
-            <button onclick="clearInputs()">Clear</button>
+        <div class="search">
+            <input id="search" onkeyup="searchProduct()" placeholder="Search products...">
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
         </div>
     </div>
-
-    <div class="search">
-        <input id="search" onkeyup="searchProduct()" placeholder="search...">
-    </div>
-
-    <table>
-        <thead>
-            <tr>
-                <th>index</th>
-                <th>name</th>
-                <th>category</th>
-                <th>price</th>
-                <th>desc</th>
-                <th>update</th>
-                <th>delete</th>
-            </tr>
-        </thead>
-        <tbody id="tableBody"></tbody>
-    </table>
 
     <script src="script.js"></script>
 </body>
